@@ -13,7 +13,7 @@ class DivFunTestsuite:public testing::TestWithParam<std::tuple<int,int,int>>{
     protected:
     DivFunTestsuite(){}
     ~DivFunTestsuite(){}
-}
+};
 TEST_P(DivFunTestSuite,HandleValidInputs){
     int numerator=std::get<0>(GetParam());
     int denominator=std::get<1>(GetParam());
