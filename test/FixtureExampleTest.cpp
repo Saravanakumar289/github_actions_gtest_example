@@ -28,7 +28,7 @@ TEST(TestFixtureTestsuite, OperationTrueTest){
     A aObj(&bObj);
 
     // Act and Assert
-    ASSERT_TRUE(obj.operation());
+    ASSERT_TRUE(aobj.operation());
 
 
 }
@@ -41,7 +41,7 @@ TEST(TestFixtureTestsuite, OperationFalseTest){
     A aObj(&bObj);
 
     // Act and Assert
-    ASSERT_FALSE(obj.operation());
+    ASSERT_FALSE(aobj.operation());
 
 
 }
