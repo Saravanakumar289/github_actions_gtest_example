@@ -9,11 +9,12 @@ int divFun(int numerator, int denominator)
     return numerator / denominator;
 }
 
-class DivFunTestsuite:public testing::TestWithParam<std::tuple<int,int,int>>{
+class DivFunTestsuite : public testing::TestWithParam<std::tuple<int,int,int>>{
     protected:
     DivFunTestsuite(){}
     ~DivFunTestsuite(){}
 };
+
 TEST_P(DivFunTestSuite,HandleValidInputs){
     int numerator=std::get<0>(GetParam());
     int denominator=std::get<1>(GetParam());
@@ -29,3 +30,4 @@ INSTANTIATE_TEST_SUITE_P(
                 std::make_tuple(10, 5, 2),
                 std::make_tuple(10, 0, 0),
                 std::make_tuple(10, -5, 0)));
+                
