@@ -44,17 +44,18 @@ class TestFixtureTestsuite:public testing::Test{
         // Releasing the resources
     }
 
-void setup(){
+void SetUp(){
     // Arrange
     this->cPtr = new C();
     this->bPtr = new B(cPtr);
-    this->aPtr = new A(bPtr)
+    this->aPtr = new A(bPtr);
 }
 
-void teardown(){
+void TearDown(){
     // delete resources
     delete cPtr;
     delete bPtr;
     delete aPtr;
 }
 };
+
