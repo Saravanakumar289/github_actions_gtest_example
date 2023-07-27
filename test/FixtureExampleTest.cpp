@@ -20,16 +20,6 @@ class A{
     }
 };
 
-TEST_F(TestFixtureTestsuite, OperationTrueTest){
-
-    // Act and Assert
-    ASSERT_TRUE(aPtr->operation());
-}
-
-TEST_F(TestFixtureTestsuite, OperationFalseTest){
-    // Act and Assert
-    ASSERT_FALSE(aPtr->operation());
-}
 
 class TestFixtureTestsuite:public testing::Test{
     protected:
@@ -59,3 +49,14 @@ void TearDown(){
 }
 };
 
+
+TEST_F(TestFixtureTestsuite, OperationTrueTest){
+
+    // Act and Assert
+    ASSERT_TRUE(aPtr->operation());
+}
+
+TEST_F(TestFixtureTestsuite, OperationFalseTest){
+    // Act and Assert
+    ASSERT_FALSE(aPtr->operation());
+}
